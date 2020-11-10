@@ -81,4 +81,5 @@ else
 end
 
 puts JSON.dump versions
+puts token
 p8_file.unlink

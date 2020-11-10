@@ -1,7 +1,6 @@
 const slack = require("./slack_test.js")
 const exec = require("child_process").exec; 
 const dirty = require('dirty');
-const { prependOnceListener } = require("process");
 const db = dirty('store.db');
 
 const env = Object.create(process.env);
@@ -25,7 +24,7 @@ function checkVersion(app) {
     var appInfoKey = "appInfo-" + app.appID; 
     var submissionStartKey = "submissionStart" + app.appID; 
 
-    var lastAppInfo = db.get(appInfoKey); 
+    console.log("Post to Slack");
     slack.post(app, db.get(submissionStartKey))
     db.set(appInfoKey, app);
 }

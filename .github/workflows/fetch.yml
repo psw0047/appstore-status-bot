@@ -34,5 +34,5 @@ jobs:
           commit-message: 'Store Appstore Info'
           force-add: 'true'
           files: store.db
-          name: Fernando
-          email: techin.park@daum.net
+          name: psw0047
+          email: psw0047@naver.com 

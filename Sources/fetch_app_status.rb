@@ -69,7 +69,8 @@ token = Spaceship::ConnectAPI::Token.create(
 
 
 Spaceship::ConnectAPI.token = token 
-
+print("=====Token=====")
+print(token)
 bundle_id_array = bundle_id.to_s.split(",")
 
 if bundle_id_array.length.zero?

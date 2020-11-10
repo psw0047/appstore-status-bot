@@ -25,6 +25,6 @@ function checkVersion(app) {
     var submissionStartKey = "submissionStart" + app.appID; 
 
     console.log("Post to Slack");
-    slack.post(app, db.get(submissionStartKey))
+    slack.post()
     db.set(appInfoKey, app);
 }

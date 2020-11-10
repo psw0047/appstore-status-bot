@@ -1,6 +1,6 @@
 const request = require('request');
 
-function main(params) {
+function post() {
 	return request.post({
 		headers: {
 			'X-SENDER': 'slack',

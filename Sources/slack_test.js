@@ -9,10 +9,14 @@ function post() {
 		url: 'http://ikameshi.linecorp.com/privmsg',
 		form: {
 			channel: 'testnel',
-			message: 'TestTest',
+			message: 'TestTest',	
 			nickname: 'iOS App Test'
 		}
 	}, function(error, response, body){
 		console.log(body);
 	});
+}
+
+module.exports = {
+    post: post
 }

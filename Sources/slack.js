@@ -1,6 +1,6 @@
 const moment = require("moment")
 const path = require('path')
-const { IncomingWebhook } = require('slack-node')
+const { IncomingWebhook } = require('@slack/webhook')
 const { I18n } = require('i18n')
 
 const webhookURL = process.env.SLACK_WEBHOOK
@@ -29,7 +29,7 @@ function post(appInfo, submissionStartDate) {
 }
 
 async function hook(message, attachment) {
-    const webhook = new IncomingWebhook(webhookURL)
+    const webhook = new IncomingWebhook(webhookURL, {})
     await webhook.send({
         text: message,
         attachments: [attachment],

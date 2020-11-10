@@ -1,4 +1,4 @@
-const slack = require("./slack.js")
+const slack = require("./slack_test.js")
 const exec = require("child_process").exec; 
 const dirty = require('dirty');
 const { prependOnceListener } = require("process");
